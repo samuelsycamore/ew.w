@@ -1,4 +1,4 @@
-import Prismic from '@prismicio/client'
+import Prismic from 'prismic-javascript'
 import Link from 'next/link'
 import {
   apiEndpoint,

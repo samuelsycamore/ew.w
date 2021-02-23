@@ -12,15 +12,12 @@ export default function Home(props) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-    <div>
-      <img src={props.home.data.image.url} alt="avatar image" height="140px" />
-      <h1>{RichText.asText(props.home.data.headline)}</h1>
-      <p>{RichText.asText(props.home.data.description)}</p>
-
+    <div className="max-w-2xl mx-auto">
       <ul>
         {props.posts.results.map((post) => (
           <Link href="posts/[id]" as={`/posts/${post.uid}`}>
           <li key={post.uid}>
+          <img src={post.data.header_photo.url} />
             {RichText.render(post.data.title)}
           </li>
           </Link>

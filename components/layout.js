@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import Nav from './Nav'
+import SimplerNav from './SimplerNav'
 import Image from 'next/image'
 
 const name = 'Edible Wild World'
@@ -9,7 +9,7 @@ export const siteTitle = 'Edible Wild World'
 
 export default function Layout({ children, home }) {
   return (
-    <div className="body-font antialiased text-lg text-black bg-gray-300">
+    <>
       <Head>
         <link rel="icon" href="/favicon.svg" />
         <meta
@@ -25,15 +25,14 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <header className="text-indigo-500 border-b border-t border-indigo-500">
-      <div className="flex justify-between py-2 px-4">
+      <div className="body-font antialiased text-lg text-black bg-gray-300">
 
-        <h1 className="font-bold text-xl tracking-tight">
+      <header className="text-indigo-500 border-b border-t border-indigo-500">
+      <div className="py-8 px-4 text-center">
+
+        <h1 className="font-bold text-5xl tracking-tight">
           {name}
         </h1> 
-      <div>
-        <Nav />
-      </div>
       </div>
       {home ? (
           <>
@@ -73,5 +72,6 @@ export default function Layout({ children, home }) {
         </div>
       )}
     </div>
+    </>
   )
 }

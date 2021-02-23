@@ -1,15 +1,16 @@
 import { client } from "../../prismic-configuration"
 import { RichText } from "prismic-reactjs"
 import Prismic from "prismic-javascript"
+import Layout from "../../components/layout"
 
 export default function Post({ data }) {
   return (
-    <>
+    <Layout>
       <article>
         <header>{RichText.asText(data.title)}</header>
         <main>{RichText.asText(data.post_body)}</main>
       </article>
-    </>
+      </Layout>
   )
 }
 

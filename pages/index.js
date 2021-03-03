@@ -17,7 +17,6 @@ export default function Home(props) {
         {props.posts.results.map((post) => (
           <Link href="posts/[id]" as={`/posts/${post.uid}`}>
           <li key={post.uid}>
-          <img src={post.data.header_photo.url} />
             {RichText.render(post.data.title)}
           </li>
           </Link>
@@ -34,14 +33,12 @@ export default function Home(props) {
 
 
 export async function getStaticProps() {
-  const home = await client.getSingle("blog_home")
   const posts = await client.query(
     Prismic.Predicates.at("document.type", "post"),
     { orderings: "[my.post.date desc]" }
   )
   return {
     props: {
-      home,
       posts,
     },
   }

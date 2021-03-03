@@ -7,14 +7,6 @@
         "placeholder": "unique-identifier-for-blog-post-url"
       }
     },
-    "header_photo": {
-      "type": "Image",
-      "config": {
-        "constraint": {},
-        "thumbnails": [],
-        "label": "header photo"
-      }
-    },
     "title": {
       "type": "StructuredText",
       "config": {

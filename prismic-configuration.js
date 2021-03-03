@@ -3,11 +3,11 @@ import Prismic from "prismic-javascript"
 // -- Prismic API endpoint
 // Determines which repository to query and fetch data from
 // Configure your site's access point here
-export const apiEndpoint = 'https://ediblewildworld.cdn.prismic.io/api/v2'
+export const apiEndpoint = 'https://local-landscapers.cdn.prismic.io/api/v2'
 
 // -- Access Token if the repository is not public
 // Generate a token in your dashboard and configure it here if your repository is private
-export const accessToken = 'MC5ZRFFpc0JJQUFDVUFUakhY.fEEJICPvv70_Nu-_ve-_vTkt77-977-9NA0u77-977-977-9FCjvv73vv73vv70477-977-9YHvvv70Q'
+export const accessToken = 'MC5ZRGdHTkJFQUFDQUFQVmdu.77-9dEXvv73vv71J77-977-9PBLvv73vv73vv73vv73vv71bDO-_ve-_ve-_vQTvv73vv73vv73vv73vv70nTjUh77-9NA'
 
 // -- Link resolution rules
 // Manages the url links to internal Prismic documents
